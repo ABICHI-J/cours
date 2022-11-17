@@ -1,0 +1,293 @@
+//STRUCTURE PAGE HTML
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title></title>
+			<meta charset="utf-8">
+				<meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+			<link rel="stylessheets" href="nomducss.css">
+		</head>
+		<body>
+			<h1></h1>
+			<p></p>
+		</body>
+	</html>
+
+*Finir d'abord le HTML avant de commencer le CSS
+
+//BALISES
+
+	<...> = balise ouvrante
+	</...> = balise fermente
+	<.../> = balise orphenile
+
+
+//ELEMENTS STRUCTURANTS (types block)
+
+	header: Représente l’en-tête ou le haut d’une page
+	nav: Représente un menu de navigation dans une page
+	footer: Représente le pied d’une page
+	section: Représente une section dans une page, c’est-à-dire un groupement thématique de contenu
+	article: Représente une partie de page qui se suffit à elle-même, comme un post sur un blog par exemple
+	aside: 	Représente une partie de contenu non lié au reste(minibiographie d'un autor)
+	main: Représente le contenu principal de l’élément body
+
+
+
+//ELEMENTS
+
+	link //lier html et css
+		
+	h1 //titre
+	
+	p //paragraphe
+ 	
+	a //créer un lien
+			
+	pre //sert a conserver la mise en forme		
+	
+	strong // texte très important (gras)
+		
+	em // texte relativement important (italique)
+ 	
+	mark // marquer un mot, important pour l'utilisateur
+			
+	ul //liste non ordonnée
+			
+	ol //liste ordonnée
+			
+	dl //description liste
+			
+	dt //description term
+			
+	dd //definition 
+		
+	li //liste
+		
+	table
+
+	tr //créer une ligne
+		
+	td //(table data) créer des célulles ou colonnes, dans tr
+		
+	th //(table head) que pour la 1ère ligne, le texte s'affiche en gras
+		
+	thead //entête d'un tableau (th)	
+
+	tfoot //pied d'un tableau	
+
+	tbody //le corps du tableau (td) 	
+
+	caption //insérer une légende pour le tableau
+		
+	audio //pour les audio "mp3" ou "ogg"
+
+	video //pour les video "mp4" ou "ogg"	
+
+	source //dans "audio"	
+
+	figure //sert a la comprehension de la page web (img, vid, etc)	
+
+	figcaption //inserer une légende pour une image (dans figure)
+		
+	form //définir le formulaire en soit
+		2 attributs (method/action)
+
+	input //champ de texte monoligne
+		3 attributs (type/id/name)
+		
+	textarea //champ de texte multiligne
+		
+	label:
+		1 pour chaque element d'un formulaire
+		1 attribut (for) la valeur de for doit être pareil que "id" et "name" des input
+		quand on appuis sur le mot du label nous envoie au saisie de texte
+	
+	div = type block //conteneurs pour plusieurs élements pour faciliter la mise en forme
+
+	span = type inline //encadrer un bout de texte en spécifique
+
+
+
+//ELEMENTS ORPHELINS
+
+	br = brake, retour à la ligne
+	img = image
+	meta = définir le type d'encodage de la page
+
+
+//ATTRIBUTS (...="x")
+
+	rel:
+		dans link
+
+	href:
+		lien
+	
+	src: 
+		source "image, audio"
+	
+	alt: 
+		alternative, décrire l'image
+	
+	charset='utf-8': 
+		pour la france
+	
+	type: 
+		pour les listes
+		
+	target="_blank": 
+		après href pour ouvrir dans une nouvelle fenêtre
+
+	style="color: red;"
+
+	class: 
+		on peut utiliser plusiers fois avec un meme valeur
+
+	id:
+		on peut utiliser une seule fois avec un meme valeur
+
+	colspan:
+		fussioner des colonnes 
+
+	rowspan:
+		fussioner des lignes
+
+	controls:
+		barre de control d'un audio/video (dans l'élement "audio/video")
+
+	loop: 
+		repeter l'audio/video en boucle
+
+	autoplay:
+		le fichier se lance automatiquement dès qu'il est prêt
+
+	poster:
+		pour avoir une image de fond dans ma video
+
+	muted:
+		pas de son dans la video
+
+	method:
+		précise la méthode d'envoie des donnée pour les formulaires
+		2 valeurs (poste/get)
+
+	action:
+		définir une page des traitement des données comme php (... .php)
+
+	for: 
+		relier un label avec un imput 
+
+	name:
+		faciliter la récuperation des donnée 
+
+
+
+//COMMENTAIRE
+
+	<!--...-->
+
+
+//LIENS EXTERNES INTERNES ET DANS LA MEME PAGE
+
+	ext = <a href="liens"></a>
+	int = page dans le même dossier <a href="nom de la page"></a>
+				page dans un sous dossier <a href="nom du sous dossier/nom de la page"></a>
+				page dans un dossier parent <a href="../nom de la page"></a>
+	<h1 id="NomDeAncre">texte</h1> ensuite <p> <a href="NomDeAncre">NomDeAncre</a></p>
+
+
+//A SAVOIR
+
+ 	&lt;=<
+ 	&gt;=>
+ 	&amp;=&
+ 	&nbsp=space dans le texte
+
+
+//POUR LIER LE HTML ET LE CSS
+
+	dans head: <link rel="stylessheets" href="nomducss.css">
+
+
+//LES TYPES BLOCK ET INLINE
+
+	block= p; ul; h1 (occoupe beacoup de space)
+	inline= strong; img; em; a; span; div (occupent que le space nécessaire)
+
+//FORMULAIRES
+
+	form: 
+		method(get/post); action
+
+		fieldset:
+			encadrer des formulaires avec une bordure
+
+			legend: 
+				ds fieldset, ajouter une légende au formulaire
+
+			label:
+				for
+
+			input:
+				type(text/bouton/search/password/date/email/url/number), id, name
+				type(radio/checkbox/submit) id, name, value
+
+				submit n'as pas besoin de label
+
+			textarea:
+				id, name
+
+			select name="": 
+				optgroup label=""
+					option value=""
+
+	attributs formulaires	
+		type/id/name/value / autocomplete/autofocus/min/max/placeholder/checked/selected/required
+
+	
+
+//RESPONSIVE DESIGN(design adaptable)
+
+	3 techniques pour adapter nos page web a toute les tailles d'écrans 
+			 
+		-créer un site dédié pour chaque terminal différents(mobile/pc)
+		-app mobile en plus de note site web
+	 	-outils offert par html et css et créer une version responsive
+		-établir des pourcentages 
+
+		
+	//VIEWPORT
+
+		pour déterminer la taille de l'ecran pour mobile ou pc mais c'est pas parfait
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+	//MEDIA QUERIES
+
+		-règles nos spécifiques en premier et après les règles spécifqiques
+
+		ex.
+
+		body{
+			background-color: green;
+		}
+
+		@media screen and (max-width: 680px){
+			body{
+				background-color: orange;
+			}
+		}
+
+		@media screen and (min-width: 681px) and (max-width: 1279px){
+			body{
+				background-color: blue;
+			}
+		}
+
+		VUE HORIZONTALE EN PORTABLE 
+
+			@media screen and (orientation: landscape){
+				... 
+			}

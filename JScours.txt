@@ -1,0 +1,920 @@
+COMMENTAIRES 
+
+    // commentaire de une ligne 
+    /*commmentaire de plusieurs lignes*/ 
+
+
+TYPES DE DONNEES (PRIMITIFS)
+
+    undefined   // pas de valeur asigné
+    null        // n'existe pas 
+    number      // reprenter un nombre
+    string      // texte " ou '
+    boolean     // true or false
+    symbol      // ?
+    object      // representer un objet
+
+
+
+//STRUCTURE D'UNE VARIABLE
+
+    var text;
+    var text = "abcdefg";
+
+
+
+//ASTUCES
+
+    - pas d'accent ds le code 
+    - indentation // space qu'on laisse dans une fontion
+    - les noms des var doivent être descriptifs
+    - Case-sensitive // sensible a MAY et min ds les noms
+    - camelCase // convention pour écrire les noms des variable
+    - " = " // opérateur d'asignation
+    - déclarer une variable // donner un nom
+    - initialiser une variable // donner une valeur
+    - JSON.stringfy(), Math.sqrt()//raiz cuadrada
+    -NaN //Not a Number
+
+    - console.log(nomVar) // affiche le résultat de la variable
+    - var a = 10; // var initialisé
+    - var a; // var non initialisé
+
+
+
+// ASIGNER LE VALEUR D'UNE VAR A UNE AUTRE VARIABLE
+
+    var a = 5;
+    var b = a;
+
+
+
+//OPERATIONS ARITMETIQUES 
+
+    //ADDITION
+        var somme = 2 + 1;
+        console.log(somme); // 3 est le résultat
+
+
+    //SUSTRACTION
+        var reste = 2 - 1;
+        console.log(reste); // 1 est le résultat
+
+
+    //MULTIPLICATION
+        var produit = 2 * 1;
+        console.log(produit); // 2 est le résultat
+
+
+    //DIVISION    
+        var cocient = 10 / 2;
+        console.log(reste); // 5 est le résultat
+
+
+    //NOMBRES DECIMALES 
+        var nbDecimal = 12.6;
+
+
+    //RESTE D'UNE DIVISION 
+        var resto = 15 % 5; // 0 est le résultat  
+
+
+    //AUGMENTER OU REDUIRE DES VARIABLES 
+
+        var a = 20;
+
+        //AUGMENTER DE +1 
+            
+            a = a + 1; // option 1 
+
+            a++;       // option 2 
+
+        //REDUIRE DE -1 
+            
+            a = a - 1; // option 1
+
+            a--;       // option 2
+
+
+        a += 5; // augmente de +5 la var
+
+        a -= 5; // diminue de -5 la var
+
+        a *= 3; // multiplie par 3 la var 
+
+        a /= 3; // divise par 3 la var
+
+
+
+//CHAINE DE CARACTERES
+
+    var a = 'Hola' ou "Hola"
+
+    //ECHAPER DES GUILLEMETS
+
+        var maChaine = "Je suis une chaîne des "caractères"" //erreur
+
+        // OPTION 1
+            "Je suis une chaîne des \"caractères\"" //on utilise des '\' avant les guillemets
+            
+
+        //OPTION 2 (meilleure option)
+            "Je suis une chaîne des 'caractères'" //on utilise des guillemets simples
+
+
+    //SEQUENCES D'ECHAPE
+
+        Code | Resultat
+
+        \'      Guillemet Simple
+        \"      Guillemet Double "
+        \\      Slash invertie  
+        \n      Nouvelle ligne
+        \r      Retour de voiture
+        \t      Tab
+        \b      Retourn
+        \f      Saute de page
+        ...
+
+
+
+//CONCATENER (+)  (FUSIONER)
+
+    var nomPrenom = "YACTAYO " + "Jairo"; // YACTAYO Jairo  
+
+    //AVEC VARIABLES
+
+        var messageComplet = "Je suis en train d'apprendre"
+        var partieFinal = " à programmer"
+
+        messageComplet += partieFinal; // Je suis en train d'apprendre à programmer
+
+
+
+//LONGITUDE D'UNE CHAINE DES CARACTERES
+
+    var maChaine = "Jairo";
+    console.log(maChaine.lenght); // 5
+
+
+
+//NOTATION DES CROCHETS
+
+    //CHAINE:  J a v a S c r i p t
+    //INDICES: 0 1 2 3 4 5 6 7 8 9
+
+    var langageDeProgrammation = "JavaScript";
+    console.log(langageDeProgrammation[0]) // J
+    console.log(langageDeProgrammation[1]) // a
+
+        //INMUTABILIDAD
+
+            var maChaine = "Calut mes amis";
+            console.log(maChaine);
+            maChaine[0] = "S"; //erreur
+
+        //SOLUTION
+
+            var maChaine = "Salut mes amis"; //il faut asigner un nouveau valeur à la variable
+
+
+    //DERNIER CARACTERE
+
+        var js = "JavaScript";
+        console.log(js[js.length - 1]) // t
+
+
+    //AVANT-DERNIER CARACTERE
+
+        var js = "JavaScript";
+        console.log(js[js.length - 2]) // t
+
+        //AUTRE OPTION
+
+            var js = "JavaScript";
+            var = n;
+
+            var n = 3;
+            console.log(js[js.lenght - n]) // i 
+
+
+
+//ARREGLOS [] (arrays)  
+
+    var a = ["Jairo", 20] // 1 crochet global
+
+    var listaDeEstudiantes = [["Sonia"; 50], ["Angie", 23]]; // des crochets ds des crochets (arrelgo anidado)
+
+    var listaDeProductos = [["Camisa", 5.20, "S587"], ["Celular", 850, "GREG"]] ;
+
+    var datos = [[3.2, 5.3, 5.2], [3.6, 5.6, 5.8], [1.2, 4.3, 7.5]];
+
+
+    //ACCEDER AUX ELEMENTS 
+
+        var miArreglo = [10, 20, 30];
+
+        //ARRAY:   [10, 20, 30]
+        //INDICES:   0   1   2
+
+        console.log(miArreglo[0]) // 10
+
+        //ADDITIONNER LES ARRAYS
+
+        var suma = miArreglo[0] + miArreglo[1] + miArreglo[2];
+        console.log(suma); // 60
+
+
+    //MODIFIER ELEMENTS 
+
+        var miArreglo = [10, 20, 30];
+        miArreglo[0] = "hola"; // "hola" est ce que je veux asigné à la place de 10
+        console.log(miArreglo); // ["hola", 20, 30];
+        
+        var miArreglo = [10, 20, 30];
+        miArreglo[1] = [1, 2, 3];
+        console.log(miArreglo); // [10, [1, 2, 3], 30]
+
+
+    //ACCEDER AUX ARRAYS MULTIDIMENSIONELS
+
+        var miArreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+        //ARRAY:            [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        //INDICES:               0          1          2
+        //INDICES INTERNES:   0  1  2    0  1  2    0  1  2
+
+        console.log(miArreglo[1]);  // [4, 5, 6]
+        console.log(miArreglo[1][2]);  // 6
+
+
+    //AJOUTER DES ELEMENTS
+
+        PUSH //ajoute un élément à la fin
+
+            var estaciones = ["Invierno", "Otoño", "Primavera"];
+            estaciones.push("Verano");
+            console.log(estaciones); // ["Invierno", "Otoño", "Primavera", "Verano"]
+
+        POP //éfface le dernier élément
+
+            var estaciones = ["Invierno", "Otoño", "Primavera", "Verano"];
+            estaciones.pop();
+            console.log(estaciones); // ["Invierno", "Otoño", "Primavera"]
+
+
+            var estaciones;
+            var estacion;
+            estaciones = ["Invierno", "Otoño", "Primavera", "Verano"];
+            estacion = estaciones.pop();
+            
+            console.log(estaciones); // ["Invierno", "Otoño", "Primavera"]
+            console.log(estacion); // "Verano"
+ 
+
+        SHIFT //éfface le premier élément
+
+            var estaciones = ["Invierno", "Otoño", "Primavera", "Verano"];
+            estaciones.shift();
+            console.log(estaciones); // ["Otoño", "Primavera", "Verano"]
+
+
+        UNSHIFT //ajoute un élément au début
+
+            var estaciones = ["Invierno", "Otoño", "Primavera"];
+            estaciones.unshift("Verano");
+            console.log(estaciones); // ["Verano", "Invierno", "Otoño", "Primavera"]
+
+
+
+//FUNCTIONS 
+
+    function mostrarMensaje() {
+
+    } //définition d'une fonction
+
+
+    function mostrarMensaje() {
+        console.log("ola q pasa");
+    }
+
+    mostrarMensaje(); //appeler à la fonction
+
+    
+    //ARGUMENTS
+        
+        function sumar (a, b) { 
+            var suma = a + b;
+            console.log("El resultado de " + a + " + " + b + " es: " + suma);
+        }
+
+        sumar(5, 3); // El resultado de 5 + 3 es: 8  (5 et 3 sont des arguments)
+      
+        var x = 5;
+        var y = 3;
+
+        sumar(x, y); // El resultado de 5 + 3 es: 8
+
+
+        function concatenarTresCadenas(cadena1, cadena2, cadena3) {
+            console.log(cadena1 + "  " + cadena2 + " " + cadena3);
+        }
+
+        concatenarTresCadenas("Estoy", "aprendiendo", "a programar"); //Estoy aprendiendo a programar
+
+
+    //VARIABLES GLOBALES ET LOCALES 
+
+        GLOBALES //peut s'utiliser ds n'importe quelle endroit du code
+        
+            var miVariableGlobal = 5;
+
+            console.log(miVariableGlobal); // 5
+        
+            function miFunction() {
+                console.log(miVariableGlobal);
+            }
+
+            miFunction(); // 5
+
+            console.log(miVariableGlobal); // 5
+
+
+
+        LOCALES //on les definis ds une fonction et peuvent être utilisés que ds cette fonction
+
+            function miFunction() {
+                var miVariableLocal = 4;
+                console.log(miVariableLocal);
+            }
+
+            miFunction(); //4
+
+            console.log(miVariableLocal); // erreur: miVariableLocal is not defined
+
+
+
+        GLOBALES ET LOCALES
+
+            var miNombre = "Jairo";
+
+            function mostrarMiNombre() {
+                var miNombre = "Leila";
+                console.log(miNombre);
+            }
+            
+            mostrarMiNombre(); // Leila
+
+            console.log(miNombre); //Jairo
+
+
+    //REENVOYER UNE VALEUR
+
+        function sumar (a, b) {
+            return a + b;
+        }
+
+        sumar(5, 3) // ne se montre pas ds la console car juste on le reenvoi
+
+        console.log(sumar(5, 3)) // 8
+
+
+        //UNDEFINED
+
+            function sumar(a, b) {
+                console.log(a + b); // 8
+            }
+
+            console.log(sumar(5, 3)); //"undefined" car les fonctions reenvoi tjrs une valeur mais cette valeur est "undefinded"
+
+
+
+            function sumar(a, b) {
+                return a + b;
+            }
+
+            //enregistrer la valeur reenvoyé par la fonction
+            var resultado = sumar(5, 3); // var resultado = 8;
+            console.log(resultado); // 8
+
+
+            function crearCadenaConMeta(lenguajeDeProgramation) {
+                return "Mi meta es aprender " + lenguajeDeProgramation;
+            }
+
+            var miMeta = crearCadenaConMeta("JavaScript"); // var miMeta = "Mi meta es aprender JavaScript"
+            console.log(miMeta) // Mi meta es aprender JavaScript
+
+
+    //QUEUE 
+        Les nouveux éléments s'ajoutent au début de la queue et les éléments précedents se retirent au début de la queue
+             
+
+        function proximoEnLaFila(arreglo, elemento) {
+            arreglo.push(elemento); //ajoute à la fin de arreglo
+            return arreglo.shift();        //efface le premier élément
+        }
+
+        var miArreglo = [1, 2, 3, 4, 5];
+
+        console.log("Avant: " + JSON.stringfy(miArreglo)); // Avant: [1, 2, 3, 4, 5]
+
+        console.log(proximoEnLaFila(miArreglo, 6)); // 1
+
+        console.log("Après: " + JSON.stringfy(miArreglo)); // Après: [2, 3, 4, 5, 6]
+
+
+//VALEURS BOOLEANS
+
+    true 
+    false
+
+
+    //OPERATEURS D'EGALITE
+
+        //Exprésions
+
+        console.log(5 == 5);  //true
+        console.log(5 == 5);  //false
+
+        console.log("Hola" == "Hola"); //true
+        console.log("Hola" == "hola"); //false
+
+        console.log([1, 2, 3] == [1, 2, 3]); //false, il ne faut pas comparér des arreglos
+
+
+    //OPERATEUR D'EGALITE STRICTE     
+
+        console.log(9 == 9);   //true
+        console.log(9 == "9"); //true
+
+        console.log(9 === 9);   //true
+        console.log(9 === "9"); //false
+
+
+    //OPERATEUR DE DESIGALITE
+
+        console.log(9 != 7); //true
+        console.log(9 != 9); //false
+
+        console.log("JavaScript" != "JavaScript"); //false
+
+        console.log([1, 2, 3] != [1, 2, 3]); //true
+
+
+    //OPERATEUR DE DESIGALITE STRICTE
+
+        console.log(1 != "1"); //false
+        console.log(1 !== "1"); //true
+
+
+    //OPERATEUR +GRAND QUE...
+
+        console.log(6 > 5);  //true
+        console.log(3 > 10); //false
+
+        console.log("B" > "A");     //true
+        console.log("ACB" > "ABC"); //true
+
+        console.log("AB" > "A");    //true
+
+        console.log("Mundo" > "Hola"); //true
+        console.log("M" > "H");        //true
+
+
+        var a = 15;
+        var b = 7;
+
+        console.log(a > b); //true
+        console.log(b > a); //false
+
+
+    //OPERATEUR +GRAND OU EGALE QUE...
+
+        console.log(5 > 5); //false
+        console.log(5 >= 5); //true 
+
+
+    //OPERATEUR +PETIT QUE...
+
+        console.log(5 < 6);  //true
+        console.log(10 < 3); //false
+
+        console.log("A" < "B");     //true
+        console.log("ABC" < "ACB"); //true
+
+        var a = 15;
+        var b = 7;
+
+        console.log(a < b); //false
+        console.log(b < a); //true
+
+
+    //OPERATEUR +PETIT OU EGALE QUE...
+
+        console.log(5 < 5);  //false
+        console.log(5 <= 5); //true
+
+
+    //OPERATEURS LOGIQUES
+    
+        "AND" //TRUE que si les 2 valeurs sont TRUE
+
+            | X | Y | X && Y |
+            ------------------
+            | T | T |    T   |
+            | T | F |    F   |
+            | F | T |    F   |
+            | F | F |    F   |
+
+            console.log(true || true);   //true
+            console.log(true || false);  //false
+            console.log(false || true);  //false
+            console.log(false || false); //false
+
+            var a = 8;
+            console.log((a < 10) || (a > 10)); //false
+
+
+        "OR"  //TRUE si au moins 1 valeur est TRUE 
+
+            | X | Y | X || Y |
+            ------------------
+            | T | T |    T   |
+            | T | F |    T   |
+            | F | T |    T   |
+            | F | F |    F   |
+
+            console.log(true || true);   //true
+            console.log(true || false);  //true
+            console.log(false || true);  //true
+            console.log(false || false); //false
+
+            var a = 8;
+            console.log((a < 10) || (a > 10)); //true
+
+
+        "NOT" //pour donner le résultat opossé 
+
+            | X | !X |
+            ----------
+            | T |  F |
+            | F |  T |
+
+            var a = 8;
+            console.log(!(a > 5)); //false
+            console.log(!(a < 5)); //true
+
+
+
+//SENTENCES CONDITIONNELS
+
+    //CLAUSULA "if"
+    
+        if () {
+
+        }
+        
+
+        var x = 5;
+
+        if (x > 2) {    
+            console.log("La condition est vrai."); //la condition est vrai 
+        }
+
+        if (x < 2) {    
+            console.log("La condition est vrai."); //pas de message car faux 
+        }
+        
+        if ((x > 2) && (x < 10)) {    
+            console.log("La condition est vrai."); //la condition est vrai 
+        }
+
+        
+        var estacion = "Invierno";
+
+        if (estacion == "Invierno") {
+            console.log("Me encanta el invierno"); //me encanta el invierno
+        }
+
+
+        var estacion = "Verano";
+
+        if (estacion == "Invierno") {
+            console.log("Me encanta el invierno"); //pas de message car faux
+        }
+
+    
+    //CLAUSULA "else"
+        
+        var x = 5;
+
+        if (x > 2) {
+            console.log("la condition est vrai"); //la condition est vrai 
+        } else {
+            console.log("la condition est fause");
+        }
+
+        if (x < 2) {
+            console.log("la condition est vrai"); 
+        } else {
+            console.log("la condition est fause"); //la condition est fause
+        }
+
+
+        var estacion = verano;
+
+        if (estacion == invierno) {
+            console.log(ya es invierno);
+        } else {
+            console.log(ya es verano); //ya es verano
+        }
+
+
+    //CLAUSULA "else if"
+
+        function clasificarValor(valor) {
+            if (valor % 2 == 0) {
+                console.log("Divisible entre 2"); //pas de message
+            } else if (valor % 3 == 0) {
+                console.log("Divisible entre 3"); //Divisible entre 3
+            }
+            else {
+                console.log("Pas divisble entre las opciones"); //pas de message
+            }  
+        }
+
+        clasificarValor(15);
+
+
+
+    //CONDITIONNEL: ORDRE LOGIQUE
+
+        //même si les trois conditions sont vrais seulement la première condition va s'afficher 
+
+        function clasificarValor(valor) {
+            if (valor < 5) {
+                console.log("Menor que 5.") //pas de message
+            } else if (valor < 10) {
+                console.log("Menor que 10.") //pas de message
+            } else {
+                console.log("Mayor o igual a 10.") //Mayor o igual a 10.
+            }
+        }
+
+        clasificarValor(12);
+
+    
+    //ENCHAINER SENTENCES 'if...else'
+
+        function interpretarIMC(valor) {
+            if (valor < 18.5) {
+                console.log("bajo peso");   //bajo peso 
+            } else if (valor <= 24.9) {
+                console.log("normal");      //pas de réponse
+            } else if (valor <= 29.9) {
+                console.log("sobrepeso");   //pas de réponse
+            } else {
+                console.log("obeso");       //pas de réponse
+            }
+        }
+
+        interpretarIMC(17.8);
+
+
+
+//SENTENCES "SWITCH"
+
+    function clasificarValor(valor) {
+        var respuesta;
+        switch (valor) {
+            case 1:
+                respuesta = "alpha";
+                break;
+            case 2:
+                respuesta = "beta";
+                break;
+            case 3:
+                respuesta = "gamma";
+                break;
+            case 4:
+                respuesta = "delta";
+                break;
+        }
+        return respuesta;
+    }
+
+    console.log(clasificarValor(1)); //alpha
+
+    --------------------------------------------
+
+    var producto = "hamburguesa"
+
+    switch(producto) {
+        case "pizza":
+            console.log("La pizza cuesta 5e")
+            break;
+        case "hamburguesa":
+            console.log("La hamburguesa cuesta 7e") //La hamburguesa cuesta 7e
+            break;
+        case "Helado":
+            console.log("El helado cuesta 3e")
+            break;
+    }       
+
+    console.log("Luego de switch") //Luego de switch
+
+
+    //SENTENCES SWITCH: OPTION PREDETERMINE
+
+        function selectionnerLangage(valor) {
+            var langue; 
+
+            switch (valor) {
+                case 1:
+                    langue = "spanish";
+                    break;
+                case 2:
+                    langue = "english";
+                    break;
+                case 3:
+                    langue = "french";
+                    break;
+                default: //pas obligé qu'il soit a la fin mais c'est une convention
+                    langue = "italian"
+                    break;
+            } 
+            return langue;
+        }
+
+        console.log(selectionnerLangage(3)); //french
+        console.log(selectionnerLangage(4)); //italian
+        
+        -----------------------------------------------
+
+        function clasificarVolumen(valor) {
+            var volumen;
+            switch (valor) {
+                case 1:
+                    volumen = "bajo";
+                    break;
+                case 2:
+                case 3:
+                    volumen = "intermedio";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    volumen = "alto";
+                    break;
+            }
+            return volumen;
+        }
+
+        console.log(clasificarVolumen(4)); //alto
+
+    
+    //REMPLAZER "if...else" pour "switch"
+
+        function selectionnerLangue(valor) {
+            var langue;
+
+            if (valor == 1) {
+                langue = "spanish";
+            } else if (valor == 2) {
+                langue = "italian";
+            } else if (valor == 3) {
+                langue = "french";
+            } else {
+                langue = "english";
+            } 
+            return langue;
+            }
+        
+        console.log(selectionnerLangue(3)); //french
+
+        ---------------------------------------------
+
+        function selectionnerLangue(valor) {
+            var langue;
+
+            switch (valor) {
+                case 1:
+                    langue = "spanish";
+                    break;
+                case 2:
+                    langue = "italian";
+                    break;
+                case 3:
+                    langue = "french";
+                    break;
+                default:
+                    langue = "english";
+                    break;
+            }
+            return langue;
+        }
+
+        console.log(selectionnerLangue(3)); //french
+
+    
+
+//RETOURNER VALEUR BOOLEANS
+
+    function esMenorQue(a, b) {
+    return a < b;
+    }
+
+    console.log(esMenorQue(3, 5)); //true
+    console.log(esMenorQue(7, 5)); //false
+    
+    
+
+//PATRON DE RETURN ANTICIPE
+
+    function miFunction() {
+        console.log("Hello");
+        return "world";
+        console.log("bye"); // ne s'execute pas car il est après return
+    }
+
+    console.log(miFunction()); //Hello
+                               //World
+
+    ----------------------------------
+
+    function calcularRaizCuadrada(num) {
+        if (num < 0) {
+            return undefined;
+        }
+        return Math.sqrt(num);
+    }
+
+    console.log(calcularRaizCuadrada(25));  //5
+    console.log(calcularRaizCuadrada(-10)); //undefined
+    
+    
+
+//CREER OBJETS
+    
+    
+
+    
+    
+    4.23
+
+
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+//EXEMPLES
+
+    let userIsSignedIn = true;
+    let userIsAdmin = false;
+
+    let name = value;
+
+    let wholeName = firstName + " " + lastName;  // valeur: "Will Alexander"
+    const myName = `Alexander`;
+    const salutation = `Bienvenue sur mon site ${myName}!`;
+    console.log(salutation);   //retournera “Bienvenue sur mon site Alexander!” 
+
+    //NOTATION POINTEE
+
+        let myBook = {
+            title: "L'Histoire de Tao",
+            author: "Will Alexander",
+            numberOfPages: 250,
+            isAvailable: true
+        };
+        let bookTitle = myBook.title;  // "L'Histoire de Tao"
+        let bookPages = myBook.numberOfPages  // 250
+
+    //NOTATION BRACKET
+
+        let bookTitle = myBook["title"];  // "L'Histoire de Tao"
+        let bookPages = myBook["numberOfPages"];  // 250
+
+        let propertyToAccess = "title";
+        let bookTitle = myBook[propertyToAccess];  // "L'Histoire de Tao"
+
+        x -= 3; // x = x-3;
+
+        concatener = aligner des elements avec + 
+        "\ (retour a la ligne)
+
+        2.20

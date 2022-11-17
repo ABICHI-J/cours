@@ -1,0 +1,434 @@
+// écrire css dans un fichiers séparé (meilleure méthode)
+
+<link rel="stylesheet" href="toto.css" type="text/css" > // pour appeler le css dans notre fichier HTML
+
+//FORME
+
+  <style>
+    p{
+      color: NomCouleur;
+    }
+    h1{
+      text-decoration: underline;
+    }
+  </style>
+
+
+/*..........*/ // pour faire de commentaire en css
+
+
+//SELECTEURS DE TYPES ELEMENTS
+
+  p
+  h1
+  ...
+
+  //pour eviter de réecrire le mm attribut 2 fois
+
+	h1;p{
+		color:...;
+	}
+
+
+//ATTRIBUTS
+
+	text-align:
+		-left 
+		-right 
+		-center 
+		-justify 
+		-inerite
+
+	text-transform:
+		-uppercase  //mayuscule
+		-lowercase  //minuscule 
+		-capitalize //1er lettre mayuscule
+		-inertie 
+		-none
+
+	text-decoration:
+		-underline
+		-overline
+		-line-through //tacher un mot
+		-none
+
+	text-indent / text-align: //orientation de texte (px ou %)
+
+	text-shadow: //ombre de texte 
+		"px px px" px(+r -l) px(+b -t) px(rayon de propagation)
+
+	font-size:
+
+	font-style:
+		-normal
+		-italic
+		-oblique
+		-inerite
+
+	font-weight: //épaisseur
+		-400 //normal
+		-700 //bold 
+		-LIGHTER
+
+	font family: //police du texte
+
+	line-height: //space entre les lignes 
+
+	letter-spacing: //space entre les lettres
+
+	word-spacing: //space entre les mots
+
+		
+
+	background-color
+
+	color
+
+	oppacity
+
+	display:
+		-inline 
+		-bloc 
+		-inline-block //pour manipuler plus facilement
+		-flex
+		-none 
+		-table //quand un elements est flotant dans un div il faut rajouter "table" pour récuperer la hauteur
+		
+
+	position:
+		-static 
+		-relative 
+		-absolue
+		-fixed
+
+	box-shadow
+
+	padding: //marge intérieur
+		
+
+	margin: //marge éxtérieur  
+		margin: 0px auto; //centrer un élément
+
+	height: //hauteur 
+	
+	width: //largeur
+
+	top
+	
+	bottom
+	
+	right
+	
+	left
+
+	radius
+
+	z-index: //nb + grand sera au dessus
+
+	float
+		-right
+		-left
+
+	clear:
+		-right
+		-left
+
+	overflow:
+		-visible
+		-scroll
+		-auto
+		-inerite 
+		-hidden
+
+	background-image:
+		url="nom-image.jpg"
+
+	background-size:
+
+	background-repeat:
+		-no-repeat 
+		-repeat-x 
+		-repeat-y
+
+	background-attachment:
+		-fixed
+
+	background-position:
+		top right ou px 
+
+	background: 
+
+		//dégradés linéaires et radiaux
+		
+			-webkit-linear-gradient(left, red, orange, blue) 
+			-o-linear-gradient(90deg, red, orange, blue)
+			-moz-linear-gradient(top, red, orange, blue)
+			linear-gradient(to right, red, orange, blue)
+
+			-webkit-linear-gradient(% %, closest-side, red, orange, blue) 
+			-o-linear-gradient(% %, farthest-side, red, orange, blue)
+			-moz-linear-gradient(top, red, orange, blue)
+			radial-gradient(circle, ..., ..., ...)
+				
+			elipse est la valeur par défaut 
+
+	border-collapse:
+		-collapse //coller les bordures des cellules d'un tableau
+
+	
+
+//VALEURS
+
+	italic 
+
+	bold
+
+	teal //blue vert
+	
+	auto
+	
+	static
+	
+	relative
+
+	fixed
+
+	center
+
+	even //pair
+
+	odd //impaire
+
+
+
+//MODELES DES BOITES
+
+  1 contenu
+  2 padding  
+  3 border 
+  4 margin  
+
+
+    //PADDING ET MARGIN
+
+		(notation)
+		padding, margin: px px px px (t, r, b, l)
+		padding, margin: px px (tb, lr)
+
+  		box-shadow:
+    		pour les boites(px px px color inset/outset)
+
+
+
+//BORDURES CSS
+
+  //notation court
+
+    border: px solid color;
+    
+    border-bottom
+    
+    border-right
+
+    border-radius // arrondi de la bordure
+
+  //notation long
+
+    border-width: //taille de la bordure
+
+    border-style:
+      solid 
+	  dotted 
+	  dashed 
+	  double
+	  (groove ridge inset outset) //pour 3d
+    
+    border-color
+    
+    border-top-width
+    
+    border-left-style
+
+    border-top-left-radius
+
+
+
+//DIFFERENCE SELECTEURS ID ET CLASS
+
+  id  "♯element"
+  
+  class ".element"
+
+
+
+//PRIORITE CSS
+
+  1 attribut style
+  2 element style
+  3 page css séparé
+
+
+
+//POLICES COMMUNES
+
+  times new roman (serif)
+  
+  geogia (serif)
+  
+  arial(sans serif)
+  
+  verdana(sans serif)
+  
+  quriegnu (monospace )
+  
+  lucida consol (monospace)
+  
+  comics sans space(cursive)
+
+
+
+//COULEURS CLASIC HEXA RGB RGBa
+
+  //classic: 
+    rouge, vert, blue
+  
+  //hexa:
+    #FFFFFF "RGB"   F = claire	0 = foncé //on prends les 2 premiers elements
+  
+  //RGB:
+    RGB(255,000,000)    255 = claire	0=foncé
+  
+  //RGBa:
+    RGBa(255,000,000,0)    a = oppacité compris entre 0 et 1
+
+
+
+//SHORT HAND ET LONG HAND 
+
+	//FONT: italic normal ...px/...0px verdana, sans-serif
+	
+		font-style
+		font-weight
+		font-size
+		line-height
+		font-family
+
+	//PADDING: ...px ...px ...px ...px
+
+		padding-top
+		padding-right
+		padding-bottom
+		padding-left
+	
+	//BORDER: ...px solid blue
+
+		border-widht
+		border-style
+		border-color
+
+	//MARGIN: ...px ...px ...px ...px
+
+		margin-top
+		margin-right
+		margin-bottom
+		margin-left
+
+		
+	//BACKGROUND: #FFF url('coucher-soleil.jpj') no-repeat scroll top left
+
+		background-color
+		background-image
+		background-repeat
+		background-attachment
+		background-position
+
+
+//CSS COMPLEXE
+
+	* //selectionner tous les elmts de la page html
+	div p // cible les elements les "p" qui sont dans des "div"
+	div "+" p // cible les elements "p" qui suivent et qui sont au mm niveau que "div" 
+	div > p // cible les elements "p" qui sont des enfants directs des elements "div"
+	div[class] // cible les "div" qui ont une "class" quelque soit sa valeur
+	div[class=div1] // cible les "div" qui ont une "class" avec une valeur "div1"
+
+	ex. 
+	input[type="submit"]{
+
+	}
+
+	//PSEUDO CLASSES
+
+		:link;
+		:visited; 
+		:hover; 
+		:active;
+
+		:first-child; 
+		:last-child; 
+
+		:nth-child;(even=paire)
+
+
+	//PSEUDO ELEMENTS
+
+		::first-letter;
+		::first-line;
+		::selection;
+		::before;
+		::after;
+
+
+	//SPRITES 
+
+		Utiliser un sprite des images si on va en utiliser bcp des images 
+			content: "..."
+
+
+	//TRANSITIONS
+
+		-webkit-transition: 3s width 1s ease, background-color 1s;
+		-webkit-transition: delay, property, duration, timing-function
+			
+			//TIMING-FUNCTION
+				linea, 
+				ease-in, 
+				ease-out, 
+				ease-in-out, 
+				ease
+		
+
+	//ANIMATIONS
+
+		//SHORT HAND
+			-webkit-animation-name: AnimationName
+			-webkit-animation-duration: 1s
+
+			@-webkit-keyframes AnimationName{
+				from{background-color: ...;}
+				to{background-color: ...;}
+			}
+
+		//LONG HAND
+			-webkit-animation-name: AnimationName
+			-webkit-animation-duration: 1s
+			-webkit-animation-timing-function: ease
+			-webkit-animation-delay: 1s
+			-webkit-animation-iteration-count: infinite
+			-webkit-animation-direction: alternate
+
+			@-webkit-keyframes AnimationName{ 
+				0%{background-color: ...; top: px; left: px;}
+				25%{background-color: ...; top: px; left: px;}
+				50%{background-color: ...; top: px; left: px;}
+				75%{background-color: ...; top: px; left: px;}
+				100%{background-color: ...; top: px; left: px;}
+			}
+	
+
+
+
+
+
+
+
