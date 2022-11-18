@@ -857,11 +857,95 @@ TYPES DE DONNEES (PRIMITIFS)
 
 //CREER OBJETS
     
+    //MODEL
+
+    var miPerro = {
+        "nombre": "Gino",
+        "edad": 5, 
+        "peso": 6,
+        "raza": "Beagle"
+    };
     
 
+    //ACCEDER A PROPRIETES:
     
+        //NOTATION DE POINT
+
+            var miPerro = {
+                "nombre": "Gino",
+                "edad": 5, 
+                "peso": 6,
+                "raza": "Beagle"
+            };
+
+            console.log(miPerro.nombre); //Gino
+            console.log(miPerro.raza); //Beagle
+
+
+        //NOTATION CROCHETS
+
+            var miCuaderno = {
+                "color": "verde",
+                "categoria": 3,
+                "numero de paginas": 200,
+                "numeroDeHojas": 100
+            };
+
+            console.log(miCuaderno["numero de paginas"]); //verde 
+            console.log(miCuaderno.numero de paginas);    //erreur
+            console.log(miCuaderno.numeroDeHojas);        //100
     
-    4.23
+
+        //VARIABLES
+
+            var resultados = {
+                1: "nora256",
+                2: "gino577",
+                3: "ester546",
+                4: "kaira555",
+            };
+
+            var position = 4;
+
+            console.log(resultados[position]); //kaira555
+
+    
+    //ACTUALISER PROPRIETES
+
+        var mochila = {
+            "color": "azul",
+            "taille": "medium",
+            "contenido": ["botella de agua", "cuaderno"]
+        };
+
+        console.log(mochila.color); //azul
+        mochila.color = "verde";
+        console.log(mochila.color); //verde
+
+        console.log(mochila.contenido); //["botella de agua", "cuaderno"]
+        mochila.contenido.push("lapiz");
+        console.log(mochila.contenido); //["botella de agua", "cuaderno", "lapiz"]
+
+        mochila.contenido = [];
+        console.log(mochila.contenido); //[]
+
+
+        //AJOUTER PROPRIETES
+
+            var curso = {
+                "titulo": "aprender javascript desde cero",
+                "idioma": "french",
+                "duracion": 30
+            };
+
+            console.log(curso.vistas); //indefined
+            curso.vistas = 34500;
+            console.log(curso.vistas); //34500
+            curso["vistas"] = 10000;
+            console.log(curso.vistas); //10000
+
+    
+    5.17
 
 
 
@@ -892,7 +976,7 @@ TYPES DE DONNEES (PRIMITIFS)
     const myName = `Alexander`;
     const salutation = `Bienvenue sur mon site ${myName}!`;
     console.log(salutation);   //retournera “Bienvenue sur mon site Alexander!” 
-
+;
     //NOTATION POINTEE
 
         let myBook = {
