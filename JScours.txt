@@ -945,7 +945,156 @@ TYPES DE DONNEES (PRIMITIFS)
             console.log(curso.vistas); //10000
 
     
-    5.17
+        //SUPRIMER PROPRIETES
+
+            var curso = {
+                "titulo": "aprender javascript desde cero",
+                "idioma": "french",
+                "duracion": 30
+            };
+
+            console.log(curso.duracion); //30
+            delete curso.duracion;            
+            console.log(curso.duracion); //undefined
+
+            console.log(curso); // {titulo: "aprender javascript desde cero", idioma: "french"}
+
+
+        //OBJET POUR RECHERCHES 
+
+            function buscarElementoQuimico(simbolo) {
+                var simbolosQuimicos = {
+                    "Al": "Aluminio",
+                    "S": "Azufre",
+                    "Cl": "Cloro",
+                    "He": "Helio",
+                    "B": "Boro",
+                    "Li": "Litio"
+                };
+
+                return simbolosQuimicos[simbolo];
+            }
+
+            console.log(buscarElementoQuimico("Al")); //Aluminio
+            console.log(buscarElementoQuimico("S"));  //Azufre
+            console.log(buscarElementoQuimico("Cl")); //Cloro
+            console.log(buscarElementoQuimico("He")); //Helio
+            console.log(buscarElementoQuimico("B"));  //Boro
+            console.log(buscarElementoQuimico("Li")); //Litio
+
+
+        //VERIFIER PROPRIETES   
+
+            var miCuaderno = {
+                "color": "verde",
+                "categoria": 3,
+                "precio": 4.20
+            };
+
+            console.log(miCuaderno.hasOwnProperty("color"));  //true
+            console.log(miCuaderno.hasOwnProperty("origen")); //false
+
+
+            function verificarPropiedad(obj, propiedad) {
+                if (obj.hasOwnProperty(propiedad)) {
+                    return "propiedad: " + obj[propiedad];
+                } else {
+                    return "el objeto no tiene propiedad";
+                }
+            }
+
+            console.log(verificarPropiedad(miCuaderno, "color")); // propiedad: verde
+            console.log(verificarPropiedad(miCuaderno, "color")); // el objeto no tiene propiedad
+    
+
+
+//OBJETS COMPLEXES
+
+    var ordenesDePizzas = [
+    {
+        "tipo": "margarita",
+        "taille": "individuel",
+        "precio": 5.20,
+        "toppings": [
+            "extra queso",
+            "champignons",
+            "ananas"
+        ],
+        "para llevar": true
+    },
+    {
+        "tipo": "cuatro quesos",
+        "taille": "familiar",
+        "precio": 14.30,
+        "toppings": [
+            "extra queso",
+            "pimenton"
+        ],
+        "para llevar": false
+    }
+];
+
+console.log(ordenesDePizzas[0].precio); //5.20
+console.log(ordenesDePizzas[0].["para llevar"]); //true
+
+
+
+//OBJETS ANIDADOS 
+
+    var miReceta = {
+    "description": "mi postre favorito",
+    "costo": 14.2,
+    "ingredientes": {
+        "masa": {
+            "harina": "100 gr",
+            "sal": "1 cucharada",
+            "agua": "1 taza"
+        },
+        "cobertura": {
+            "azucar": "120 gr",
+            "chocolate": "4 cucharadas",
+            "manteca": "200gr"
+        }
+    }
+};
+
+console.log(miReceta.ingredientes.masa.sal); //1 cucharada
+
+
+//ARREGLOS ANIDADOS 
+
+    var misPlantas = [
+    {
+        tipo: "flores",
+        lista: [
+            "rosas",
+            "tulipanes",
+            "dientes de leon"
+        ]
+    },
+    {
+        tipo: "arboles",
+        lista: [
+            "abeto",
+            "pino",
+            "abedul"
+        ]
+    }
+];
+
+var primeraFlor = misPlantas[0].lista[0];
+console.log(primeraFlor); //rosas
+
+var segundoArbol = misPlantas[1].lista[1];
+console.log(segundoArbol); //pino
+
+
+
+    
+
+
+
+
 
 
 

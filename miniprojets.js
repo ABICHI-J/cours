@@ -123,3 +123,40 @@
     console.log(contarCartas(7)); //2 apostar
     console.log(contarCartas(K)); //1 apostar
     console.log(contarCartas(A)); //0 esperar
+
+
+//6eme miniprojet
+
+var coleccionDeDiscos = {
+    7853: {
+        tituloDelAlbum: "vuelta a la luna",
+        artista: "ysy a",
+        canciones: ["rockstar", "hielo"]
+    },
+    5439: {
+        tituloDelAlbum: "Ciudad gris"
+    }
+};
+
+function actualizarDiscos(discos, id, propiedad, valor) {
+    if (valor === "") {
+        delete discos[id][propiedad];
+    } else if (propiedad === "canciones") {
+        discos[id][propiedad] = [];
+        discos[id][propiedad].push(valor);
+    } else {
+        discos[id][propiedad] = valor;
+    }
+}
+
+console.log(coleccionDeDiscos[7853].tituloDelAlbum); //"vuelta a la luna"
+actualizarDiscos(coleccionDeDiscos, 7853, "tituloDelAlbum", "");
+console.log(coleccionDeDiscos[7853].tituloDelAlbum); //undefined
+
+console.log(coleccionDeDiscos[5439].canciones); //undefined
+actualizarDiscos(coleccionDeDiscos, 5439, "canciones", "solo");
+console.log(coleccionDeDiscos[5439].canciones); //["solo"]
+
+console.log(coleccionDeDiscos[5439].artista); //undefined
+actualizarDiscos(coleccionDeDiscos, 5439, "artista", "cro");
+console.log(coleccionDeDiscos[5439].artista); //cro
