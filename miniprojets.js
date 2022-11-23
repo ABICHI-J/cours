@@ -160,3 +160,42 @@ console.log(coleccionDeDiscos[5439].canciones); //["solo"]
 console.log(coleccionDeDiscos[5439].artista); //undefined
 actualizarDiscos(coleccionDeDiscos, 5439, "artista", "cro");
 console.log(coleccionDeDiscos[5439].artista); //cro
+
+
+
+//7eme miniprojet - busqueda de perfiles
+
+    var contactos = [
+        {
+            "nombre": "Nora",
+            "apellido": "Nav",
+            "numero": "0543236543",
+            "gustos": ["pizza", "programation"]
+        },
+        {
+            "nombre": "Harry",
+            "apellido": "Potter",
+            "numero": "1818111515",
+            "gustos": ["howwarts", "magia"]
+        },
+        {
+            "nombre": "sherlock",
+            "apellido": "holmes",
+            "numero": "8849849764",
+            "gustos": ["ovnis", "guitarra"]
+        }
+    ];
+
+    function buscarPerfil(nombre, propiedad) {
+        for (var i = 0; i < contactos.length; i++) {
+            if (contactos[i].nombre === nombre) {
+                return contactos[i][propiedad] || "la propiedad no existe.";
+            }
+        }
+        return "El contacto no esta en la lista.";
+    }
+
+    console.log(buscarPerfil("Nora", "Gustos"));    //["pizza", "programation"]
+    console.log(buscarPerfil("Harry", "apellido")); //Potter
+    console.log(buscarPerfil("Nora", "direccion")); //la propiedad no existe.
+    console.log(buscarPerfil("Bob", "numero"));     //El contacto no esta en la lista.
