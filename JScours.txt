@@ -1092,15 +1092,51 @@ console.log(segundoArbol); //pino
 
 //LOOP WHILE = mientras
 
+    iteration //repetition du bloc de code qu'on veut repeter
+
     var i = 0;
 
     while (i <= 3) {
-        console.log("Hola"),
+        console.log("Hola"), //Hola (4 fois)
         i++;
     }
 
+    ----------------------------------------
+
+    var miArreglo = [];
+    var i = 0;
+
+    console.log(miArreglo); //[]
+
+    while(i < 10) {
+        miArreglo.push(i);
+        i++;
+    }
+
+    console.log(miArreglo); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    ----------------------------------------
+
+    var numeros = [2, 3, 4, 5, 6, 7, 8, 34];
+
+    while (numeros.lenght > 4) {
+        numeros.pop();
+    }
+
+    console.log(numeros); // [2, 3, 4, 5]
 
 
+
+// FOR
+
+    var miArreglo = [];
+
+    for (var i = 0; i < 10; i += 2) {
+        miArreglo.push(i); // i on peut le changer par autre chose
+    }
+
+    console.log(miArreglo); // [0, 2, 4, 6, 8]
+    
 
 
     
