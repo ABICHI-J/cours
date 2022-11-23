@@ -1090,6 +1090,19 @@ console.log(segundoArbol); //pino
 
 
 
+//LOOP WHILE = mientras
+
+    var i = 0;
+
+    while (i <= 3) {
+        console.log("Hola"),
+        i++;
+    }
+
+
+
+
+
     
 
 
