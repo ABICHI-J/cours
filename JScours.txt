@@ -1258,6 +1258,311 @@ console.log(segundoArbol); //pino
     console.log(generarFraccionAleatoria); //0.646464654 (aleatorio)
     console.log(generarFraccionAleatoria); //0.854646868
 
+    //NUMEROS ALEATOIRES ENTIERS Floor (convertir a entier)
+
+        var  numeroAleatorioEntre0y19 = Math.floor(Math.random() * 20);
+
+        console.log(numeroAleatorioEntre0y19); //12
+        console.log(numeroAleatorioEntre0y19); //8
+
+        ---------------------------------------------
+
+        function generarEnteroAleatorio(limiteSuperior) {
+            //Generar un entero aleatorio entre 0 y el limite
+            //superior (sin incluirlo).
+            return Math.floor(Math.random() * limiteSuperior);
+        }
+
+        console.log(numeroEnteroAleatorio(5)); // 1
+        console.log(numeroEnteroAleatorio(5)); // 4
+
+        for (var i = 0; i < 15; i++) {
+            console.log(generarEnteroAleatorio(5)); // 15 nombre aleatoires sans compter le 5
+        }
+    
+    //NUMEROS ENTIERS ALEATOIRES DANS UN RANG
+
+        function rangoAleatorio(limiteInferior, limiteSuperior) {
+            return Math.floor(Math.random() * (limiteSuperior - limiteInferior + 1)) + limiteInferior;
+        }
+
+        console.log(rangoAleatorio(3, 8)); //5, 5, 3, 4, 7, 4
+
+        for (var i = 0; i < 15; i++) {
+            console.log(rangoAleatorio(3, 8)); // 15 nombre aleatoires compris 8
+        }
+
+        
+//FUNCTION ParseInt (convertir une string a un entier)
+
+    console.log(parseInt("5"));   //5
+    console.log(parseInt("-47")); //-47
+    console.log(parseInt("0"));   //0
+    console.log(parseInt("6.7")); //6
+    console.log(parseInt("6.2")); //6
+    console.log(parseInt("abc")); //NaN (Not a Number)
+
+    -----------------------------------------------
+
+    var a = "5";
+    var b = "7";
+
+    console.log(a + b); //57
+
+    ------------------------------------------------
+
+    var a = parseInt"5";
+    var b = parseInt"7";
+
+    console.log(a + b); //12
+
+
+    //FUNCTION ParseInt() CON UNA BASE (binarios)
+
+        console.log(parseInt("110111", 2)); //55
+        console.log(parseInt(110111, 2));   //55
+
+        -----------------------------------------
+
+        console.log(parseInt("3E0A", 16));  //15882
+        console.log(parseInt(3E0A, 16));    //ERREUR (on peut pas enlever les guillemet pour les hexa)
+
+
+//OPERADOR CONDITIONAL (Ternario)
+
+    return //evaluar
+
+    -----------------
+
+    function retornarMinimo(x, y) {
+        if (x < y) {
+            return x;
+        } else {
+            return y;
+        }
+    }
+
+    -------------------------------
+
+    function retornarMinimo(x, y) {
+        console.log(return x < y ? x : y);
+    }
+
+    retornarMinimo(4, 7); //4
+    retornarMinimo(8, 2); //2
+    retornarMinimo(5, 5); //5
+
+    ----------------------------------
+
+    function retornarMinimo(x, y) {
+        return x < y ? x : y;
+    }
+
+    console.log(retornarMinimo(4, 7)); //4
+    console.log(retornarMinimo(8, 2)); //2
+    console.log(retornarMinimo(5, 5)); //5
+
+    -------------------------------------
+
+    var a = 5;
+    var b = 9;
+
+    console.log(a > b ? a + 2 : b * 3); //27
+
+
+    //MULTIPLES OPERADORES CONDITIONALES
+
+        function compararNumeros(a, b) {
+            if (a == b) {
+                return "a y b son iguales";
+            } else if (a > b) {
+                return "a es mayor que b";
+            } else {
+                return "b es mayor que a";
+            }
+        }
+
+        ----------------------------------
+
+        function compararNumeros(a, b) {
+            return a == b ? "a y b son iguales" 
+                :  a > b ? "a es mayor que b"
+                :  "b es mayor que a";
+        }
+
+        console.log(compararNumeros(11, 27)); // b es mayor que a
+        console.log(compararNumeros(27, 11)); // a es mayor que b
+        console.log(compararNumeros(15, 15)); // a y b son iguales
+
+
+
+//VAR vs LET
+
+    //on peut utiliser LET qu'une seule fois 
+
+    var campista = "James";
+    var campista = "David";
+
+    console.log(campista);
+
+    ------------------------
+
+    let campista = "James";
+    let campista = "David";
+
+    console.log(campista); //ERREUR (campista a déja été déclarer)
+
+    -------------------------
+
+    //on peut juste réasigner la valeur de LET mais pas la déclarer à nouveau
+    
+    let campista = "James";
+    campista = "David"; 
+
+    console.log(campista); //David
+
+
+    //AMBITO VAR vs LET
+
+        var miVariableGlobal = 4;
+
+        console.log(miVariableGlobal); //4
+
+        function miFunction() {
+            console.log(miVariableGlobal); //4
+
+            var miVariableLocal = 8;
+            console.log(miVariableLocal); //8
+        }
+
+        miFunction();
+
+        console.log(miVariableGlobal); //4
+        console.log(miVariableLocal); //ERREUR (miVariableLocal is not defined)
+
+        -----------------------------------------
+
+        //VAR peut être utilisé en dehors d'un boucle
+        //LET ne peut pas être utilisé en dehors d'un boucle
+
+        for (var i = 0; i < 3; i++) {
+            console.log(i); //0, 1, 2
+        }
+
+        console.log("variable: " + i); //3
+
+        -------------------------------------------
+
+        for (let i = 0; i < 3; i++) {
+            console.log(i); //0, 1, 2
+        }
+
+        console.log("variable: " + i); //ERREUR (i is not defined)
+
+        --------------------------------------------
+
+        var mostrarColor = true;
+
+        if (mostrarColor) {
+            let color = "verde";
+            console.log("mi color favorito es: " + color); //mi color favorito es verde
+        }
+        console.log(color); //ERREUR 
+
+        ---------------------------------------------
+
+        var mostrarColor = true;
+
+        if (mostrarColor) {
+            var color = "verde";
+            console.log("mi color favorito es: " + color); //mi color favorito es verde
+        }
+        console.log(color); //verde
+
+
+
+//CONST
+
+    const miConstante = 35;
+
+    console.log(miConstante); //35
+
+    miConstante = 15; //TypeError: 'miConstante' is read-only (on peut pas le modifer)
+
+    --------------------------------
+
+    const miConstante;
+
+    miConstante = 35;
+
+    console.log(miConstante); //ERREUR (il faut donner une valeur dans la même ligne)
+
+    ----------------------------------
+
+    const MI_CONSTANTE = 35;
+
+    console.log(MI_CONSTANTE); //35
+
+    -----------------------------------
+
+    // "**" una potencia para elevar un numero ya sea al cuadrado otro valor
+
+    function calcularAreaCirculo(radio) {
+        const PI = 3.14;
+
+        if (radio < 0) {
+            return undefined;
+        }
+
+        return PI * (radio ** 2);
+    }
+
+    console.log(calcularAreaCirculo(10)); //314
+    console.log(calcularAreaCirculo(5));  //78.5
+
+
+    //MUTAR ARREGLO DECLARADO CON CONST
+
+        const MI_ARREGLO = [1, 2, 3, 4];
+
+        MI_ARREGLO[0] = 5;
+        MI_ARREGLO[1] = 6;
+        MI_ARREGLO[2] = 7;
+        MI_ARREGLO[3] = 8;
+
+        console.log(MI_ARREGLO); //[5, 6, 7, 8]
+
+
+    //CREER UN OBJET INMUTABLE
+
+        let colores = {
+            "verde": "#10e04b",
+            "azul": "#1b50e0",
+            "negro": "#000000",
+            "blanco": "#ffffff"
+        };
+
+        Object.freeze(colores);
+
+        colores.amarillo = "#fff200";
+        colores.verde = "#345dg4";
+        delete colores.verde;
+
+        colores.amarillo(colores); //TypeError: Cannot add property amarillo; object is not extensible
+                                   //TypeError: Cannot assign to read only property 'verde'
+                                   //TypeError: Cannot delete property 'verde'
+        
+
+    //FONCTIONS FLECHA
+
+        
+
+
+
+        
+
+
+
 
 
         
